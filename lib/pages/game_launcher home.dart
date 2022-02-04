@@ -20,7 +20,7 @@ class _GameLauncherHomeState extends State<GameLauncherHome> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFF061626),
+        backgroundColor: Color(0xFF061626),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 16, right: 16, top: 16),
