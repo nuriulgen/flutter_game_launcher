@@ -1,5 +1,5 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -69,13 +69,17 @@ class _ProfilePageState extends State<ProfilePage> {
               color: Color(0xFF061626).withOpacity(0.7),
               child: Column(children: [
                 ListTile(
+                  leading: const CircleAvatar(
+                    backgroundColor: Colors.green,
+                    child: Icon(CupertinoIcons.person),
+                  ),
                   title: const Text(
-                    'Language',
+                    'Account Settings',
                     style: TextStyle(color: Colors.white),
                   ),
-                  leading: const CircleAvatar(
-                    backgroundColor: Colors.red,
-                    child: Icon(Icons.language),
+                  subtitle: const Text(
+                    'Privacy,Language',
+                    style: TextStyle(color: Colors.white, fontSize: 11),
                   ),
                   trailing: Container(
                     width: 40,
@@ -91,12 +95,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 const SizedBox(height: 10),
                 ListTile(
                   title: const Text(
-                    'Notification',
+                    'Logout',
                     style: TextStyle(color: Colors.white),
                   ),
                   leading: const CircleAvatar(
-                    backgroundColor: Colors.red,
-                    child: Icon(Icons.notifications_sharp),
+                    backgroundColor: Colors.blue,
+                    child: Icon(Icons.logout),
                   ),
                   trailing: Container(
                     width: 40,
@@ -109,8 +113,8 @@ class _ProfilePageState extends State<ProfilePage> {
                         size: 17, color: Colors.white),
                   ),
                 ),
-                const SizedBox(height: 10),
-                ListTile(
+
+                /* ListTile(
                   title: const Text(
                     'Dark Mode',
                     style: TextStyle(color: Colors.white),
@@ -132,16 +136,37 @@ class _ProfilePageState extends State<ProfilePage> {
                     activeTrackColor: Colors.blueAccent,
                     activeColor: Colors.white,
                   ),
+                ),*/
+                const SizedBox(height: 10),
+                ListTile(
+                  title: const Text(
+                    'Send Feedback',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  leading: const CircleAvatar(
+                    backgroundColor: Colors.purpleAccent,
+                    child: Icon(Icons.thumb_up),
+                  ),
+                  trailing: Container(
+                    width: 40,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white.withOpacity(0.3),
+                    ),
+                    child: const Icon(Icons.arrow_forward_ios,
+                        size: 17, color: Colors.white),
+                  ),
                 ),
                 const SizedBox(height: 10),
                 ListTile(
                   title: const Text(
-                    'Help',
+                    'Report a Bug',
                     style: TextStyle(color: Colors.white),
                   ),
                   leading: const CircleAvatar(
-                    backgroundColor: Colors.red,
-                    child: Icon(Icons.help),
+                    backgroundColor: Colors.teal,
+                    child: Icon(Icons.bug_report),
                   ),
                   trailing: Container(
                     width: 40,
